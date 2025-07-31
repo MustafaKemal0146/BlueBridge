@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="img/favicon.png" alt="BlueBridge Logo" width="120" height="120">
   
   # 🌉 BlueBridge
   ### Raspberry Pi Bluetooth Connector
@@ -82,7 +81,7 @@ BlueBridge, Raspberry Pi cihazınızın IP adresini Bluetooth üzerinden Android
       </td>
       <td width="50%" align="center">
         <h3>🥧 Raspberry Pi Kurulumu</h3>
-        <img src="https://img.shields.io/badge/Raspberry%20Pi-3%2F4%2FZero%20W-red.svg" alt="Pi Version">
+        <img src="https://img.shields.io/badge/Raspberry%20Pi%E2%80%913%2F4%2FZero%20W%20%7C%20Pi%205-C51A4A?logo=Raspberry%E2%80%91Pi&style=for-the-badge" alt="Pi Version">
         <br><br>
         <ol align="left">
           <li>Dosyaları Pi'nize kopyalayın</li>
@@ -119,11 +118,12 @@ sudo ./pi-setup.bash</pre>
 ### 1. Raspberry Pi'yi Hazırlayın
 - Pi'nizde kurulum scriptini çalıştırın
 - Bluetooth'un açık olduğundan emin olun
+- Raspberry cihazınız ve android cihazınızı bluetooth ile bağlayın
 - BlueBridge servisi otomatik olarak başlayacak
 
 ### 2. Android Uygulamasını Kullanın
 - BlueBridge uygulamasını açın
-- "Scan & Connect" butonuna basın
+- "Scan & Connect" butonuna basın (Tekrardan söylüyorum pi ile android'i önceden bluetooth ile bağlayın!)
 - Raspberry Pi'nizi listeden seçin
 - Bağlantı kurulduktan sonra IP adresini görün
 
@@ -155,7 +155,7 @@ sudo ./pi-setup.bash</pre>
 - Konum izni (Bluetooth tarama için)
 
 ### Raspberry Pi
-- Raspberry Pi 3/4/Zero W (Bluetooth desteği olan)
+- Raspberry Pi 3/4/5/Zero W (Bluetooth desteği olan)
 - Raspberry Pi OS (Bullseye veya üzeri)
 - Python 3.7+
 - Bluetooth etkin
@@ -182,11 +182,7 @@ sudo journalctl -u bluebridge -f
 
 ## 🤝 Katkıda Bulunma
 
-1. Bu repository'yi fork edin
-2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Add amazing feature'`)
-4. Branch'inizi push edin (`git push origin feature/amazing-feature`)
-5. Pull Request oluşturun
+1. Bu Projeyi Yıldızlayın :)
 
 ## 📄 Lisans
 
@@ -196,7 +192,8 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosy
 
 **Mustafa Kemal Çıngıl**
 - GitHub: [@MustafaKemal0146](https://github.com/MustafaKemal0146)
-- Email: mustafakemal0146@gmail.com
+- Email: ismustafakemal0146@gmail.com
+- Linkedin: [@Mustafakemalcingil](https://www.linkedin.com/in/mustafakemalcingil/)
 
 ---
 
@@ -262,7 +259,6 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosy
 ## 🎯 Gelecek Planları
 
 - [ ] iOS uygulaması
-- [ ] Web arayüzü
 - [ ] Çoklu Pi desteği
 - [ ] SSH terminal entegrasyonu
 - [ ] VNC viewer entegrasyonu
