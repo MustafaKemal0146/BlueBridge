@@ -3,7 +3,7 @@
   # 🌉 BlueBridge
   ### Raspberry Pi Bluetooth Connector
   
-  <img src="https://img.shields.io/badge/Version-1.3.0-blue.svg" alt="Version">
+  <img src="https://img.shields.io/badge/Version-1.4.0-blue.svg" alt="Version">
   <img src="https://img.shields.io/badge/Platform-Android-green.svg" alt="Platform">
   <img src="https://img.shields.io/badge/Raspberry%20Pi-Compatible-red.svg" alt="Raspberry Pi">
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
@@ -34,10 +34,10 @@ BlueBridge, Raspberry Pi cihazınızın IP adresini Bluetooth üzerinden Android
         anlık olarak görün</p>
       </td>
       <td align="center" width="33%">
-        <h4>📋 Kolay Kopyalama</h4>
-        <p><strong>Tek Dokunuş</strong><br>
-        IP adresini panoya<br>
-        tek dokunuşla kopyalayın</p>
+        <h4>🖥️ SSH Bağlantısı</h4>
+        <p><strong>Terminal Erişimi</strong><br>
+        SSH komutu ile doğrudan<br>
+        terminal bağlantısı</p>
       </td>
     </tr>
     <tr>
@@ -48,16 +48,16 @@ BlueBridge, Raspberry Pi cihazınızın IP adresini Bluetooth üzerinden Android
         dil desteği</p>
       </td>
       <td align="center">
-        <h4>🎨 Modern Tasarım</h4>
-        <p><strong>Animasyonlu UI</strong><br>
-        Kullanıcı dostu<br>
+        <h4>🎨 Aurora Tasarım</h4>
+        <p><strong>Modern Animasyonlar</strong><br>
+        Renkli aurora efektli<br>
         modern arayüz</p>
       </td>
       <td align="center">
-        <h4>⚙️ Gelişmiş Ayarlar</h4>
-        <p><strong>Özelleştirme</strong><br>
-        Otomatik bağlantı ve<br>
-        bildirim ayarları</p>
+        <h4>📋 Kolay Kopyalama</h4>
+        <p><strong>Tek Dokunuş</strong><br>
+        IP ve SSH komutunu<br>
+        tek dokunuşla kopyalayın</p>
       </td>
     </tr>
   </table>
@@ -72,8 +72,19 @@ BlueBridge, Raspberry Pi cihazınızın IP adresini Bluetooth üzerinden Android
         <h3>📱 Android Uygulaması</h3>
         <img src="https://img.shields.io/badge/Android-6.0+-green.svg" alt="Android Version">
         <br><br>
+        <div align="center">
+          <a href="BlueBridgeV1.4.apk" download>
+            <img src="https://img.shields.io/badge/Download-v1.4.0%20APK-brightgreen?style=for-the-badge&logo=android" alt="Download v1.4.0">
+          </a>
+          <br><br>
+          <a href="V1.3/BlueBridgeV1.3.apk" download>
+            <img src="https://img.shields.io/badge/Download-v1.3.0%20APK-blue?style=flat&logo=android" alt="Download v1.3.0">
+          </a>
+        </div>
+        <br>
         <ol align="left">
-          <li><code>BlueBridge.apk</code> dosyasını indirin</li>
+          <li><strong>v1.4.0 (Güncel):</strong> <code>BlueBridgeV1.4.apk</code> dosyasını indirin</li>
+          <li><strong>v1.3.0 (Arşiv):</strong> <code>V1.3/BlueBridgeV1.3.apk</code> dosyası</li>
           <li>Bilinmeyen kaynaklardan kuruluma izin verin</li>
           <li>APK dosyasını çalıştırarak kurun</li>
           <li>Bluetooth ve konum izinlerini verin</li>
@@ -127,9 +138,11 @@ sudo ./pi-setup.bash</pre>
 - Raspberry Pi'nizi listeden seçin
 - Bağlantı kurulduktan sonra IP adresini görün
 
-### 3. IP Adresini Kullanın
+### 3. IP Adresini ve SSH'ı Kullanın
 - Görüntülenen IP adresine dokunarak kopyalayın
-- SSH: `ssh pi@[IP_ADRESI]`
+- "SSH ile Bağlan" butonuna basarak terminal bağlantısı kurun
+- SSH komutunu kopyalayıp terminal'de kullanın
+- Sistem bilgilerini (CPU, RAM, Disk, Sıcaklık) gerçek zamanlı izleyin
 - VNC: VNC Viewer'da IP adresini girin
 
 ## 🛠️ Teknik Detaylar
@@ -204,33 +217,54 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosy
 
 ## 📸 Uygulama Ekran Görüntüleri
 
+### 🆕 v1.4.0 Yeni Tasarım
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="50%">
+        <img src="img/yenianasayfa.jpg" alt="Yeni Ana Sayfa v1.4.0" width="250"><br>
+        <strong>🌌 Yeni Ana Sayfa (v1.4.0)</strong><br>
+        <small>Aurora animasyonlu arkaplan, SSH butonu ve sistem bilgileri</small>
+      </td>
+      <td align="center" width="50%">
+        <img src="img/yenidevices.jpg" alt="Yeni Cihazlar v1.4.0" width="250"><br>
+        <strong>📱 Yeni Cihazlar Sayfası (v1.4.0)</strong><br>
+        <small>Aurora temalı cihaz tarama ve gelişmiş uyarılar</small>
+      </td>
+    </tr>
+  </table>
+</div>
+
+### 📱 Önceki Sürüm Ekranları (v1.3.0)
+
 <div align="center">
   <table>
     <tr>
       <td align="center" width="20%">
-        <img src="img/1anasayfa.jpg" alt="Ana Sayfa" width="180"><br>
+        <img src="img/1anasayfa.jpg" alt="Ana Sayfa" width="150"><br>
         <strong>🏠 Ana Sayfa</strong><br>
-        <small>Animasyonlu arkaplan ve bağlantı durumu</small>
+        <small>Eski tasarım</small>
       </td>
       <td align="center" width="20%">
-        <img src="img/2devicessayfası.jpg" alt="Cihazlar" width="180"><br>
+        <img src="img/2devicessayfası.jpg" alt="Cihazlar" width="150"><br>
         <strong>📱 Cihazlar</strong><br>
-        <small>Bluetooth cihaz tarama ve listesi</small>
+        <small>Eski tasarım</small>
       </td>
       <td align="center" width="20%">
-        <img src="img/3ayarlarsayfası.jpg" alt="Ayarlar" width="180"><br>
+        <img src="img/3ayarlarsayfası.jpg" alt="Ayarlar" width="150"><br>
         <strong>⚙️ Ayarlar</strong><br>
-        <small>Dil seçimi ve uygulama ayarları</small>
+        <small>Dil seçimi ve ayarlar</small>
       </td>
       <td align="center" width="20%">
-        <img src="img/4cihazbulundu.jpg" alt="Cihaz Bulundu" width="180"><br>
+        <img src="img/4cihazbulundu.jpg" alt="Cihaz Bulundu" width="150"><br>
         <strong>🔍 Cihaz Bulundu</strong><br>
-        <small>Raspberry Pi tespit edildi</small>
+        <small>Pi tespit edildi</small>
       </td>
       <td align="center" width="20%">
-        <img src="img/5cihazabaglandik.jpg" alt="Bağlandı" width="180"><br>
-        <strong>✅ Bağlantı Kuruldu</strong><br>
-        <small>IP adresi görüntüleme ve kopyalama</small>
+        <img src="img/5cihazabaglandik.jpg" alt="Bağlandı" width="150"><br>
+        <strong>✅ Bağlandı</strong><br>
+        <small>IP görüntüleme</small>
       </td>
     </tr>
   </table>
@@ -243,7 +277,48 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosy
 4. **IP Görüntüleme** → Pi'nin IP adresini görme ve kopyalama
 5. **Ayarlar** → Dil ve uygulama tercihlerini ayarlama
 
+## 🔄 v1.4.0 Güncellemesi Nasıl Kurulur?
+
+### Mevcut Kullanıcılar İçin Güncelleme:
+
+```bash
+# SSH ile Pi'ye bağlan
+ssh pi@[PI_IP_ADRESI]
+
+# 1. Mevcut servisi durdur
+sudo systemctl stop bluebridge
+
+# 2. Yeni server dosyasını güncelle
+sudo cat > /opt/bluebridge/raspberry-pi-bluetooth-server.py << 'EOF'
+# (Güncellenmiş server kodu - GitHub'dan alın)
+EOF
+
+# 3. İzinleri ayarla
+sudo chmod +x /opt/bluebridge/raspberry-pi-bluetooth-server.py
+
+# 4. SSH servisini etkinleştir
+sudo systemctl enable ssh
+sudo systemctl start ssh
+
+# 5. Servisi yeniden başlat
+sudo systemctl start bluebridge
+
+# 6. Durumu kontrol et
+sudo systemctl status bluebridge
+```
+
+### Yeni Kurulum İçin:
+Kurulum scriptini çalıştırın: `sudo ./pi-setup.bash`
+
 ## 🔄 Güncellemeler
+
+### v1.4.0 - Sistem Monitörü ve SSH Entegrasyonu
+- 🖥️ **Gerçek Zamanlı Sistem Bilgileri** - CPU, RAM, Disk, Sıcaklık
+- 🔗 **SSH Terminal Bağlantısı** - Tek tıkla SSH komut kopyalama
+- 🌌 **Aurora Arka Plan Animasyonu** - Renkli yıldızlı gökyüzü efekti
+- ⚠️ **Gelişmiş Kullanıcı Uyarıları** - Bluetooth eşleştirme ve WiFi uyarıları
+- 📊 **Performans Metrikleri** - Gerçek Pi verilerinden sistem durumu
+- 🎨 **Modern UI Güncellemeleri** - Daha şık kartlar ve animasyonlar
 
 ### v1.3.0
 - Modern animasyonlu tasarım
@@ -260,10 +335,12 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosy
 
 - [ ] iOS uygulaması
 - [ ] Çoklu Pi desteği
-- [ ] SSH terminal entegrasyonu
+- [x] SSH terminal entegrasyonu ✅ v1.4.0
 - [ ] VNC viewer entegrasyonu
 - [ ] Dosya transferi
-- [ ] Sistem monitoring
+- [x] Sistem monitoring ✅ v1.4.0
+- [ ] Terminal emülatörü (uygulama içi)
+- [ ] Grafik performans gösterimi
 
 ## ⚠️ Önemli Notlar
 
@@ -283,21 +360,38 @@ Sorunlarınız için:
 ## 📁 Dosya Yapısı
 
 ```
-share/
-├── 📱 BlueBridge.apk          # Android uygulaması (APK dosyası)
+BlueBridge/
+├── 📱 BlueBridgeV1.4.apk      # Android uygulaması v1.4.0 (Güncel)
 ├── 📄 README.md               # Bu dosya
-├── 🐍 bluebridge-server.py    # Raspberry Pi sunucu scripti
-├── 🔧 pi-setup.bash           # Otomatik kurulum scripti
-└── img/
-    └── 🖼️ favicon.png          # BlueBridge logosu
+├── 🐍 bluebridge-server.py    # Raspberry Pi sunucu scripti v1.4.0
+├── 🔧 pi-setup.bash           # Otomatik kurulum scripti v1.4.0
+├── img/
+│   ├── 🖼️ yenianasayfa.jpg     # v1.4.0 Ana sayfa ekran görüntüsü
+│   ├── 🖼️ yenidevices.jpg      # v1.4.0 Cihazlar sayfası ekran görüntüsü
+│   └── 🖼️ favicon.png          # BlueBridge logosu
+└── V1.3/                      # ESKİ SÜRÜM ARŞİVİ
+    ├── 📱 BlueBridgeV1.3.apk   # Android uygulaması v1.3.0
+    ├── 📄 README.md            # v1.3.0 dokümantasyonu
+    ├── 🐍 bluebridge-server.py # v1.3.0 sunucu scripti
+    └── 🔧 pi-setup.bash        # v1.3.0 kurulum scripti
 ```
 
 ### 📦 İndirme ve Kurulum Sırası
 
-1. **Tüm dosyaları indirin** (ZIP olarak veya git clone)
+1. **BlueBridge klasörünü indirin** (ZIP olarak veya git clone)
 2. **Raspberry Pi'de kurulum yapın**: `sudo ./pi-setup.bash`
-3. **Android'e APK kurun**: `BlueBridge.apk`
-4. **Uygulamayı açın ve bağlanın** 🎉
+3. **Android'e APK kurun**: `BlueBridgeV1.4.apk` (v1.4.0 - Güncel)
+4. **Pi'ye bağlanın ve sistem bilgilerini izleyin** 🎉
+
+### 📂 Eski Sürümler
+- **v1.3.0 dosyaları**: `V1.3/` klasöründe arşivlenmiştir
+- **Eski sürüm APK**: `V1.3/BlueBridgeV1.3.apk`
+
+### 🆕 v1.4.0 Yenilikleri:
+- **Gerçek Zamanlı Monitoring**: CPU %25, RAM %45, Disk %18, Sıcaklık 52°C
+- **SSH Entegrasyonu**: `ssh kemal@192.168.1.100` komutunu tek tıkla kopyala
+- **Aurora Animasyon**: Renkli yıldızlı gökyüzü arka planı
+- **Akıllı Uyarılar**: Bluetooth eşleştirme ve WiFi bağlantı rehberi
 
 ---
 

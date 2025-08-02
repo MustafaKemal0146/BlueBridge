@@ -54,6 +54,9 @@ install_packages() {
     # Install Bluetooth packages
     apt install -y bluetooth bluez bluez-tools rfcomm
     
+    # Install SSH server (if not already installed)
+    apt install -y openssh-server
+    
     # Install Python packages
     pip3 install --upgrade pip
     
@@ -149,14 +152,25 @@ EOF
     print_success "Systemd service created and enabled"
 }
 
-# Configure firewall (if ufw is installed)
-configure_firewall() {
+# Configure SSH and firewall
+configure_ssh_firewall() {
+    print_status "Configuring SSH..."
+    
+    # Enable SSH service
+    systemctl enable ssh
+    systemctl start ssh
+    
+    # Configure firewall (if ufw is installed)
     if command -v ufw &> /dev/null; then
         print_status "Configuring firewall..."
+        # Allow SSH connections
+        ufw allow ssh
         # Allow Bluetooth connections
         ufw allow from any to any port 1 proto tcp
         print_success "Firewall configured"
     fi
+    
+    print_success "SSH configured and enabled"
 }
 
 # Start services
@@ -231,7 +245,8 @@ EOF
 main() {
     echo ""
     echo "=========================================="
-    echo "  BlueBridge Raspberry Pi Setup Script"
+    echo "  BlueBridge v1.4.0 Raspberry Pi Setup"
+    echo "  SSH Integration & System Monitoring"
     echo "=========================================="
     echo ""
     
@@ -243,20 +258,28 @@ main() {
     update_system
     install_packages
     configure_bluetooth
+    configure_ssh_firewall
     install_bluebridge
     create_service
-    configure_firewall
     start_services
     create_uninstall
     
     echo ""
     echo "=========================================="
-    print_success "BlueBridge installation completed!"
+    print_success "BlueBridge v1.4.0 installation completed!"
     echo "=========================================="
+    echo ""
+    
+    print_status "🆕 v1.4.0 New Features:"
+    echo "  • SSH terminal integration"
+    echo "  • Real-time system monitoring (CPU, RAM, Disk, Temperature)"
+    echo "  • Performance metrics collection"
+    echo "  • Enhanced Android app with Aurora theme"
     echo ""
     
     print_status "Service Information:"
     echo "  • Service name: bluebridge"
+    echo "  • Version: 1.4.0"
     echo "  • Log file: /var/log/bluebridge.log"
     echo "  • Config directory: /opt/bluebridge"
     echo ""
@@ -269,17 +292,26 @@ main() {
     echo "  • Uninstall: sudo /opt/bluebridge/uninstall.sh"
     echo ""
     
-    print_status "Bluetooth Information:"
-    echo "  • Device should be discoverable as: $(hostname)"
+    print_status "Bluetooth & SSH Information:"
+    echo "  • Device discoverable as: $(hostname)"
     echo "  • Service name: BlueBridge-Service"
-    echo "  • Make sure your Android device can discover this Pi"
+    echo "  • SSH enabled: $(systemctl is-active ssh)"
+    echo "  • SSH command: ssh $(whoami)@$(hostname -I | awk '{print $1}')"
+    echo ""
+    
+    print_status "System Monitoring:"
+    echo "  • CPU usage monitoring: ✓"
+    echo "  • Memory usage monitoring: ✓" 
+    echo "  • Disk usage monitoring: ✓"
+    echo "  • Temperature monitoring: ✓"
     echo ""
     
     check_status
     
     echo ""
-    print_success "Setup complete! Your Raspberry Pi is ready for BlueBridge connections."
-    print_status "You can now use the BlueBridge Android app to connect to this Pi."
+    print_success "🎉 Setup complete! Your Raspberry Pi is ready for BlueBridge v1.4.0 connections."
+    print_status "📱 Download the latest BlueBridge Android app and enjoy the new features!"
+    print_status "🌌 New Aurora theme, SSH integration, and real-time system monitoring!"
     echo ""
 }
 
