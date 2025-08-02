@@ -11,7 +11,15 @@
   <br><br>
   <img src="img/splash.png" alt="BlueBridge Splash" width="300">
 </div>
+## Star History
 
+<a href="https://www.star-history.com/#MustafaKemal0146/BlueBridge&Timeline">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=MustafaKemal0146/BlueBridge&type=Timeline&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=MustafaKemal0146/BlueBridge&type=Timeline" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=MustafaKemal0146/BlueBridge&type=Timeline" />
+ </picture>
+</a>
 ## 📱 Proje Hakkında
 
 BlueBridge, Raspberry Pi cihazınızın IP adresini Bluetooth üzerinden Android telefonunuza aktaran modern bir mobil uygulamadır. Üniversite öğrencileri ve geliştiriciler için tasarlanmış bu uygulama, Raspberry Pi'nize SSH veya VNC bağlantısı kurmak için gerekli IP adresini kolayca almanızı sağlar.
